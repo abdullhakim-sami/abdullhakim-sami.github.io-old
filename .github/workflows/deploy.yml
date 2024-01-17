@@ -1,4 +1,4 @@
-name: Test Bun # Name it however you want
+name: Deploy # Name it however you want
 
 on:
   # Trigger the workflow every time you push to the `main` branch
