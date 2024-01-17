@@ -4,16 +4,15 @@ on:
   # Trigger the workflow every time you push to the `main` branch
   # Using a different branch name? Replace `main` with your branch’s name
   push:
-    branches: [ main ]
+    branches: [main]
   # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
 
 # Allow this job to clone the repo and create a page deployment
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
-
 
 jobs:
   # Build job
@@ -21,12 +20,12 @@ jobs:
     # <Not provided for brevity>
     # At a minimum this job should upload artifacts using actions/upload-pages-artifact
     steps:
-    - uses: actions/checkout@v4
-    - uses: oven-sh/setup-bun@v1
-      with:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v1
+        with:
           bun-version: latest # You can also use a specific version
-      # run any `bun` or `bunx` command
-    - run: bunx elm-land build
+        # run any `bun` or `bunx` command
+      - run: bunx elm-land build
 
   # deploy:
   #   # Add a dependency to the build job
@@ -48,4 +47,3 @@ jobs:
   #     - name: Deploy to GitHub Pages
   #       id: deployment
   #       uses: actions/deploy-pages@v4 # or specific "vX.X.X" version tag for this action
-
