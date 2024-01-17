@@ -20,17 +20,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      # - uses: oven-sh/setup-bun@v1
-      #   with:
-      #     bun-version: latest # You can also use a specific version
-      #   # run any `bun` or `bunx` command
-      # - run: bun install
-      # - run: bunx elm-land build
-      - uses: actions/setup-node@v4
+      # Using with bun
+      - uses: oven-sh/setup-bun@v1
         with:
-          node-version: 20
-      - run: npm ci
-      - run: npx elm-land build
+          bun-version: latest # You can also use a specific version
+        # run any `bun` or `bunx` command
+      - run: bun install
+      - run: bunx elm-land build
+
+      # Using with Npm
+      # - uses: actions/setup-node@v4
+      #   with:
+      #     node-version: 20
+      # - run: npm ci
+      # - run: npx elm-land build
+
 
       - uses: actions/upload-pages-artifact@v3
         with:
