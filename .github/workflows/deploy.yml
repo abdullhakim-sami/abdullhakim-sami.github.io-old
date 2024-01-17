@@ -24,6 +24,7 @@ jobs:
         with:
           bun-version: latest # You can also use a specific version
         # run any `bun` or `bunx` command
+      - run: bun install
       - run: bunx elm-land build
       - uses: actions/upload-pages-artifact@v3
         with:
