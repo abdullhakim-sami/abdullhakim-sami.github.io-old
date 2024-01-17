@@ -1,7 +1,7 @@
 module Pages.Home_ exposing (Model, Msg, page)
 
 import Effect exposing (Effect)
-import Element exposing (alignTop, centerX, el, fill, height, padding, rgb255, text, width)
+import Element exposing (Element, alignTop, centerX, el, fill, height, padding, paddingEach, rgb255, text, width)
 import Element.Background exposing (color)
 import Element.Border
 import Element.Input exposing (button)
@@ -80,10 +80,10 @@ view model =
     , attributes = []
     , element =
         el [ color (rgb255 242 199 80), width fill, height fill ]
-            (el [ Element.alignTop, centerX, padding 50 ]
-                (button [ Element.Border.rounded 30, Element.Border.dotted ]
+            (el [ Element.alignTop, centerX, padding 10 ]
+                (button [ paddingEach { top = 10, bottom = 10, left = 3, right = 3 }, Element.Border.solid, Element.Border.width 5, Element.Border.rounded 20, Element.Border.color (rgb255 142 199 80) ]
                     { onPress = Just Test
-                    , label = text "Hello, Elm UI! ✨"
+                    , label = text "Content Management System"
                     }
                 )
             )
