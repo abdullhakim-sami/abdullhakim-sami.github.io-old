@@ -1,12 +1,12 @@
 module Pages.Home_ exposing (Model, Msg, page)
 
-import Debug exposing (log)
+-- import Debug exposing (log)
+
 import Effect exposing (Effect)
 import Element exposing (Element, alignTop, centerX, el, fill, height, padding, paddingEach, rgb255, text, width)
 import Element.Background exposing (color)
 import Element.Border
 import Element.Input exposing (button)
-import Html
 import Page exposing (Page)
 import Pages.NotFound_ exposing (Msg)
 import Route exposing (Route)
@@ -52,19 +52,19 @@ update : Msg -> Model -> ( Model, Effect Msg )
 update msg model =
     case msg of
         NoOp ->
-            let
-                _ =
-                    log "Current Msg" msg
-            in
+            -- let
+            --     _ =
+            --         log "Current Msg" msg
+            -- in
             ( model
             , Effect.none
             )
 
         ButtonPressed ->
-            let
-                _ =
-                    log "Current Msg" msg
-            in
+            -- let
+            --     _ =
+            --         log "Current Msg" msg
+            -- in
             ( model
             , Effect.none
             )
