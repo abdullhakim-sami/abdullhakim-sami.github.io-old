@@ -7,5 +7,5 @@ import View exposing (View)
 page : View msg
 page =
     { title = "Homepage"
-    , body = [ Html.text "Hello, world!" ]
+    , body = [ Html.text "Github Pages! yo!" ]
     }
