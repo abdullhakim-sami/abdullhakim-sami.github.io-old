@@ -27,7 +27,7 @@ jobs:
           bun-version: latest # You can also use a specific version
         # run any `bun` or `bunx` command
       - run: bunx elm-land build
-      - uses: actions/upload-pages-artifact@v4
+      - uses: actions/upload-pages-artifact@v3
         with:
           name: github-pages
           path: dist # or path/to/artifact
