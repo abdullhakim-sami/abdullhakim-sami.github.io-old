@@ -1,3 +1,13 @@
+name: Test Bun # Name it however you want
+
+on:
+  push:
+    branches:
+      - main # Execute on every push
+  workflow_dispatch: # Execute on manual trigger
+
+
+
 jobs:
   # Build job
   build:
