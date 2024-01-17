@@ -30,7 +30,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: github-pages
-          path: dist/ # or path/to/artifact
+          path: dist # or path/to/artifact
 
   deploy:
     # Add a dependency to the build job
